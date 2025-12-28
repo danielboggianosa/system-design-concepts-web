@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
         concepts.forEach((concept, index) => {
             const card = document.createElement('a');
             card.href = `concepts/${concept.folder}/index.html`;
-            card.className = 'concept-card';
+            const groupNum = Math.ceil(concept.id / 10);
+            card.className = `concept-card group-${groupNum}`;
             // Staggered animation
             card.style.animation = `fadeInDown 0.5s ease-out ${index * 0.05}s backwards`;
-            
+
             card.innerHTML = `
                 <div class="card-number">#${concept.id.toString().padStart(2, '0')}</div>
                 <div class="card-title">${concept.title}</div>
