@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Client-Server Architecture | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#01</div>
+                    <h1>Client-Server Architecture</h1>
+                    <div class="concept-desc">
+                        <p>
+                            The fundamental architectural pattern of the web. It separates concerns into two distinct
+                            parties:
+                        </p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.5rem;"><strong style="color: var(--primary)">Client:</strong>
+                                The requester (Browser, Mobile App). It initiates communication.</li>
+                            <li><strong style="color: var(--secondary)">Server:</strong> The provider. It processes
+                                requests and returns resources (HTML, JSON, Files).</li>
+                        </ul>
+                        <p>
+                            Communication typically happens over HTTP/HTTPS. Ideally, the client doesn't need to know
+                            how the server works, just how to ask for what it wants (API).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <!-- Animation Elements -->
+                    <div class="device client">
+                        <div class="icon">💻</div>
+                        <div class="label">Client</div>
+                    </div>
+
+                    <div class="pathway">
+                        <div class="packet request" id="req-packet">REQ</div>
+                        <div class="packet response" id="res-packet">RES</div>
+                    </div>
+
+                    <div class="device server">
+                        <div class="icon">🖥️</div>
+                        <div class="label">Server</div>
+                        <div class="status-light" id="server-status"></div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="restart-btn" class="btn">Send Request</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>REST API | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#08</div>
+                    <h1>REST API</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>REST (Representational State Transfer)</strong> is a popular architectural style for
+                            APIs. It uses standard HTTP methods to perform actions on resources (data objects).
+                        </p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
+                            <li><span class="verb get">GET</span> Retrieve a resource (Read).</li>
+                            <li><span class="verb post">POST</span> Create a new resource.</li>
+                            <li><span class="verb put">PUT</span> Update an existing resource (Replace).</li>
+                            <li><span class="verb delete">DELETE</span> Remove a resource.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="database-container">
+                        <div class="db-label">Database Resources</div>
+                        <div id="resource-slot">
+                            <!-- Resource card will appear/change here -->
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button class="action-btn" onclick="executeMethod('GET')">GET</button>
+                        <button class="action-btn" onclick="executeMethod('POST')">POST</button>
+                        <button class="action-btn" onclick="executeMethod('PUT')">PUT</button>
+                        <button class="action-btn" onclick="executeMethod('DELETE')">DELETE</button>
+                    </div>
+
+                    <div id="console-output">Ready...</div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

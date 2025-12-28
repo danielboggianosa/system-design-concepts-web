@@ -1,0 +1,144 @@
+.visualization-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.server-node,
+.database-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.server-node .icon {
+    font-size: 3.5rem;
+}
+
+.cylinder-stack {
+    position: relative;
+    width: 80px;
+    height: 100px;
+}
+
+.layer {
+    width: 100%;
+    height: 30px;
+    background: #334155;
+    border: 2px solid #64748b;
+    border-radius: 50% / 20%;
+    position: absolute;
+    box-shadow: 0 4px 0 #1e293b;
+    transition: transform 0.2s;
+}
+
+.layer::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% / 20%;
+    background: inherit;
+    z-index: -1;
+}
+
+.layer1 {
+    bottom: 0;
+    z-index: 3;
+}
+
+.layer2 {
+    bottom: 25px;
+    z-index: 2;
+}
+
+.layer3 {
+    bottom: 50px;
+    z-index: 1;
+    border-top: 2px solid #64748b;
+    background: #475569;
+}
+
+.data-pipe {
+    height: 100px;
+    width: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    position: relative;
+    border-radius: 2px;
+}
+
+.data-particle {
+    width: 12px;
+    height: 12px;
+    background: var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%) scale(0);
+    box-shadow: 0 0 10px var(--primary);
+    opacity: 0;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+@keyframes writeDown {
+    0% {
+        top: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    80% {
+        top: 100%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+@keyframes readUp {
+    0% {
+        top: 100%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    80% {
+        top: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        top: 0;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+}
+
+@keyframes swell {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+        border-color: var(--secondary);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

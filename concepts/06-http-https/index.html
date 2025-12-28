@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTTP vs HTTPS | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#06</div>
+                    <h1>HTTP / HTTPS</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>HTTP (Hypertext Transfer Protocol)</strong> is the foundation of data communication
+                            on the web. It transmits data in <strong>plain text</strong>, meaning anyone intercepting it
+                            can read it.
+                        </p>
+                        <p>
+                            <strong>HTTPS (S = Secure)</strong> uses TLS/SSL to <strong>encrypt</strong> the
+                            communication. Only the sender and receiver have the keys to decrypt the data.
+                        </p>
+                        <p class="note">
+                            Always use HTTPS for sensitive data (Passowrds, Credit Cards).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="mode-switch">
+                        <button class="mode-btn active" onclick="setMode('http')">HTTP (Insecure)</button>
+                        <button class="mode-btn" onclick="setMode('https')">HTTPS (Secure)</button>
+                    </div>
+
+                    <div class="network-path">
+                        <div class="device client">
+                            <span class="icon">💻</span>
+                        </div>
+
+                        <div class="pipe">
+                            <div class="packet" id="data-packet">password123</div>
+                            <div class="hacker" id="hacker">
+                                <span class="icon">🦹</span>
+                                <div class="tooltip" id="hacker-tooltip">I hacked: password123</div>
+                            </div>
+                        </div>
+
+                        <div class="device server">
+                            <span class="icon">🖥️</span>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="send-data-btn" class="btn">Send Data</button>
+                        <div id="status-text" style="margin-top: 1rem; color: var(--text-muted);"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

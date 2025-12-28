@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Databases | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#10</div>
+                    <h1>Databases</h1>
+                    <div class="concept-desc">
+                        <p>
+                            A <strong>Database</strong> is a system for authorized collection of data. It allows for
+                            efficient storage, retrieval, and modification of data.
+                        </p>
+                        <p>
+                            Web servers are typically "stateless" (they forget everything after a request). Databases
+                            provide <strong>persistence</strong> (memories that last).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="server-node">
+                        <div class="icon">🖥️</div>
+                        <div>App Server</div>
+                    </div>
+
+                    <div class="data-pipe">
+                        <div class="data-particle" id="db-particle"></div>
+                    </div>
+
+                    <div class="database-node">
+                        <div class="cylinder-stack">
+                            <div class="layer layer1"></div>
+                            <div class="layer layer2"></div>
+                            <div class="layer layer3"></div>
+                        </div>
+                        <div class="label">Database</div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="btn" id="write-btn">Write Data</button>
+                        <button class="btn" id="read-btn">Read Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

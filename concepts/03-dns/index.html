@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DNS | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#03</div>
+                    <h1>DNS</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>Domain Name System (DNS)</strong> is the phonebook of the internet. Humans access
+                            information online through domain names like <em>google.com</em> or <em>espn.com</em>. Web
+                            browsers interact through Internet Protocol (IP) addresses.
+                        </p>
+                        <p>
+                            DNS translates domain names to IP addresses so browsers can load Internet resources.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="user-query">
+                        <div class="browser-bar">
+                            <span id="domain-text">google.com</span>
+                        </div>
+                        <div class="arrow-down">↓</div>
+                    </div>
+
+                    <div class="dns-server">
+                        <div class="icon">📒</div>
+                        <div class="label">DNS Resolver</div>
+                        <div class="lookup-process" id="lookup-process">Looking up...</div>
+                    </div>
+
+                    <div class="result-display" id="result-display">
+                        IP: <span class="highlight">142.250.190.46</span>
+                    </div>
+
+                    <div class="controls">
+                        <button id="lookup-btn" class="btn">Resolve Domain</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

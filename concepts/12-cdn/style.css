@@ -1,0 +1,103 @@
+.visualization-container {
+    flex-direction: column;
+}
+
+.world-map {
+    width: 100%;
+    height: 300px;
+    background: #0f172a;
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    background-image: radial-gradient(#1e293b 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.server {
+    position: absolute;
+    padding: 0.5rem;
+    background: #1e293b;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.server.origin {
+    top: 30%;
+    left: 20%;
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.server.edge {
+    opacity: 0.3;
+    /* Hidden by default in no-cdn mode */
+    border-color: #f59e0b;
+}
+
+.server.edge.eu {
+    top: 30%;
+    left: 50%;
+}
+
+.server.edge.asia {
+    top: 40%;
+    left: 80%;
+}
+
+.user {
+    position: absolute;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.user-us {
+    top: 60%;
+    left: 20%;
+}
+
+.user-eu {
+    top: 60%;
+    left: 50%;
+}
+
+.user-asia {
+    top: 70%;
+    left: 80%;
+}
+
+.packet {
+    position: absolute;
+    font-size: 1.2rem;
+    opacity: 0;
+    z-index: 20;
+}
+
+.mode-switch {
+    display: flex;
+    gap: 0.5rem;
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.mode-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.mode-btn.active {
+    background: var(--primary);
+    color: white;
+}

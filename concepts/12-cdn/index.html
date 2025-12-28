@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CDN | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#12</div>
+                    <h1>CDN</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>CDN (Content Delivery Network)</strong> is a geographically distributed network of
+                            proxy servers. Its goal is to provide high availability and performance by distributing the
+                            service spatially relative to end-users.
+                        </p>
+                        <p>
+                            Instead of everyone downloading a video from one server in New York, users in London
+                            download it from a server in London.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="world-map">
+                        <div class="server origin" id="origin-server" title="Origin (USA)">🇺🇸 Origin</div>
+                        <div class="server edge eu" id="edge-eu" title="Edge (Europe)">🇪🇺 Edge</div>
+                        <div class="server edge asia" id="edge-asia" title="Edge (Asia)">🇯🇵 Edge</div>
+
+                        <div class="user user-us">User (USA)</div>
+                        <div class="user user-eu">User (EU)</div>
+                        <div class="user user-asia">User (Asia)</div>
+
+                        <!-- Travel lines will be drawn via JS usually or absolute positioned elements -->
+                        <div class="packet" id="packet">📦</div>
+                    </div>
+
+                    <div class="controls">
+                        <label style="color: var(--text-muted); margin-right: 1rem;">Mode:</label>
+                        <div class="mode-switch">
+                            <button class="mode-btn active" onclick="setMode('no-cdn')">Without CDN</button>
+                            <button class="mode-btn" onclick="setMode('cdn')">With CDN</button>
+                        </div>
+                        <button class="btn" id="start-btn" onclick="startStream()">Start Download</button>
+                    </div>
+
+                    <div id="stats" style="margin-top: 1rem; font-family: monospace; color: var(--text-muted);"></div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

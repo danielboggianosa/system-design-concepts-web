@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Load Balancer | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#13</div>
+                    <h1>Load Balancer</h1>
+                    <div class="concept-desc">
+                        <p>
+                            A <strong>Load Balancer</strong> distributes incoming network traffic across multiple
+                            servers. This ensures no single server bears too much load.
+                        </p>
+                        <p>
+                            It prevents server crashes due to high traffic and improves overall availability.
+                        </p>
+                        <p class="note">Algorithm shown: <strong>Round Robin</strong> (Sequential distribution).</p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="traffic-source">
+                        <div class="label">Incoming Traffic</div>
+                        <div id="queue">
+                            <!-- Cars generated here -->
+                        </div>
+                    </div>
+
+                    <div class="balancer">
+                        <div class="lb-icon">⚖️</div>
+                        <div class="label">Load Balancer</div>
+                    </div>
+
+                    <div class="server-pool">
+                        <div class="server" id="server-1">
+                            <div class="server-icon">🖥️</div>
+                            <div class="server-label">Server 1</div>
+                            <div class="load-bar">
+                                <div class="fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="server" id="server-2">
+                            <div class="server-icon">🖥️</div>
+                            <div class="server-label">Server 2</div>
+                            <div class="load-bar">
+                                <div class="fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="server" id="server-3">
+                            <div class="server-icon">🖥️</div>
+                            <div class="server-label">Server 3</div>
+                            <div class="load-bar">
+                                <div class="fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button class="btn" onclick="addTraffic(1)">Add 1 Request</button>
+                        <button class="btn secondary" onclick="addTraffic(5)">Add 5 Requests (Burst)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

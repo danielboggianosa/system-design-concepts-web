@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IP Address | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#02</div>
+                    <h1>IP Address</h1>
+                    <div class="concept-desc">
+                        <p>
+                            An <strong>Internet Protocol (IP) Address</strong> is a unique address that identifies a
+                            device on the internet or a local network.
+                        </p>
+                        <p>
+                            Think of it like a <strong>House Address</strong>. To receive mail (data packets), you need
+                            a specific location that the sender can target.
+                        </p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.5rem;"><strong>IPv4:</strong> Four sets of numbers (e.g.,
+                                192.168.1.1) - most common.</li>
+                            <li><strong>IPv6:</strong> Longer, hexadecimal format to accommodate more devices.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="street">
+                        <div class="house" data-ip="192.168.1.10">
+                            <div class="roof"></div>
+                            <div class="body">192.168.1.10</div>
+                        </div>
+                        <div class="house target" data-ip="192.168.1.11">
+                            <div class="roof"></div>
+                            <div class="body">192.168.1.11</div>
+                            <div class="marker">Target</div>
+                        </div>
+                        <div class="house" data-ip="192.168.1.12">
+                            <div class="roof"></div>
+                            <div class="body">192.168.1.12</div>
+                        </div>
+                    </div>
+
+                    <div class="packet-container">
+                        <div class="packet" id="ip-packet">Data</div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="send-ip-btn" class="btn">Send to 192.168.1.11</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,84 @@
+.visualization-container {
+    flex-direction: column;
+}
+
+.traffic-source {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balancer {
+    background: #1e293b;
+    border: 2px solid var(--primary);
+    padding: 1rem;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.lb-icon {
+    font-size: 2rem;
+}
+
+.server-pool {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.server {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 100px;
+    transition: transform 0.1s;
+}
+
+.server.active {
+    border-color: #22c55e;
+    transform: scale(1.05);
+}
+
+.server-icon {
+    font-size: 2.5rem;
+}
+
+.load-bar {
+    width: 100%;
+    height: 6px;
+    background: #334155;
+    border-radius: 3px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #22c55e;
+    transition: width 0.3s;
+}
+
+/* Flying Packet */
+.request-packet {
+    position: fixed;
+    /* Easier to animate across containers */
+    width: 20px;
+    height: 20px;
+    background: #f59e0b;
+    border-radius: 50%;
+    z-index: 20;
+    pointer-events: none;
+    box-shadow: 0 0 10px #f59e0b;
+}

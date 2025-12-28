@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>APIs | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#07</div>
+                    <h1>APIs</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>API (Application Programming Interface)</strong> is a set of rules that allows
+                            different software applications to communicate with each other.
+                        </p>
+                        <p>
+                            The classic analogy is a <strong>Restaurant</strong>:
+                        </p>
+                        <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
+                            <li style="margin-bottom: 0.5rem;"><strong>You (Client):</strong> You want food
+                                (data/service), but you can't go into the kitchen.</li>
+                            <li style="margin-bottom: 0.5rem;"><strong style="color: var(--primary)">Waiter
+                                    (API):</strong> Takes your order, sends it to the kitchen, and brings you the food.
+                            </li>
+                            <li><strong>Kitchen (System):</strong> Prepares the food described in the order.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <div class="scene">
+                        <div class="zone customer-zone">
+                            <div class="emoji">👤</div>
+                            <div class="label">Customer</div>
+                        </div>
+
+                        <div class="zone waiter-zone">
+                            <div class="emoji" id="waiter">🤵</div>
+                            <div class="label">API (Waiter)</div>
+                            <div class="order-bubble" id="order-bubble">📝 Order</div>
+                        </div>
+
+                        <div class="zone kitchen-zone">
+                            <div class="emoji">👨‍🍳</div>
+                            <div class="label">System (Kitchen)</div>
+                        </div>
+                    </div>
+
+                    <div class="status-msg" id="api-status">Waiting for order...</div>
+
+                    <div class="controls">
+                        <button id="order-btn" class="btn">Place Order</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

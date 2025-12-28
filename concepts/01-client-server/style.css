@@ -1,0 +1,144 @@
+.device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.icon {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+.label {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.pathway {
+    flex-grow: 1;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 0 2rem;
+    position: relative;
+    border-radius: 2px;
+}
+
+.packet {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) scale(0);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0;
+}
+
+.packet.request {
+    background: var(--primary);
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.packet.response {
+    background: var(--secondary);
+    box-shadow: 0 0 15px var(--secondary);
+    left: 100%;
+    /* Start from server */
+}
+
+.server {
+    position: relative;
+}
+
+.status-light {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color: black;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-family: inherit;
+}
+
+.btn:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.btn:active {
+    transform: translateX(-50%) scale(0.95);
+}
+
+/* Animations */
+@keyframes sendRequest {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        left: 100%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes sendResponse {
+    0% {
+        left: 100%;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    }
+
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 10px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}

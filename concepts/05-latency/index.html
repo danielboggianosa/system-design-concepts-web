@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Latency | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                Back to Concepts
+            </a>
+
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#05</div>
+                    <h1>Latency</h1>
+                    <div class="concept-desc">
+                        <p>
+                            <strong>Latency</strong> is the time it takes for data to travel from its source to its
+                            destination. It is often measured in milliseconds (ms).
+                        </p>
+                        <p>
+                            High latency = Slow response (Lag).<br>
+                            Low latency = Fast response.
+                        </p>
+                        <p class="note">
+                            Factors affecting latency: Distance, Network Congestion, Protocol overhead.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="visualization-container" id="visualization">
+                    <!-- Path A: Low Latency -->
+                    <div class="path-container">
+                        <div class="label-row">
+                            <span>Nearby Server (CDN)</span>
+                            <span class="latency-value" id="latency-a">0ms</span>
+                        </div>
+                        <div class="path">
+                            <div class="packet" id="packet-a"></div>
+                        </div>
+                    </div>
+
+                    <!-- Path B: High Latency -->
+                    <div class="path-container">
+                        <div class="label-row">
+                            <span>Distant Server (Overseas)</span>
+                            <span class="latency-value" id="latency-b">0ms</span>
+                        </div>
+                        <div class="path">
+                            <div class="packet" id="packet-b"></div>
+                        </div>
+                    </div>
+
+                    <div class="controls">
+                        <button id="ping-btn" class="btn">Ping Servers</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>

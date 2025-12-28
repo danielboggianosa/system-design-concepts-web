@@ -1,0 +1,76 @@
+.visualization-container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+}
+
+.path-container {
+    width: 100%;
+}
+
+.label-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.latency-value {
+    color: var(--accent);
+    font-family: monospace;
+}
+
+.path {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.packet {
+    width: 60px;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 5px;
+    position: absolute;
+    left: -60px;
+    top: 0;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+#packet-b {
+    background: var(--secondary);
+    box-shadow: 0 0 15px var(--secondary);
+}
+
+.note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+@keyframes travelex {
+    0% {
+        left: 0%;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        left: 100%;
+        transform: translateX(0);
+    }
+
+    /* Reaches server */
+    100% {
+        left: 0%;
+        transform: translateX(-100%);
+    }
+
+    /* Returns */
+}
+
+/* We will handle animation duration in JS to simulate latency */
