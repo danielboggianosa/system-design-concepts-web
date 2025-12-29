@@ -1,0 +1,22 @@
+
+.db-node {
+    width: 100px;
+    height: 60px;
+    border: 2px solid var(--glass-border);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    background: #1e293b;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.replicas {
+    display: flex;
+    gap: 20px;
+}
+.primary {
+    border-color: var(--secondary);
+}
+        

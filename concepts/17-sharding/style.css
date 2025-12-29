@@ -1,0 +1,24 @@
+
+.shards-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.shard {
+    border: 1px solid var(--glass-border);
+    padding: 10px;
+    border-radius: 8px;
+    width: 150px;
+    min-height: 100px;
+    background: #1e293b;
+}
+.stored-item {
+    background: var(--primary);
+    padding: 2px 5px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    animation: fadeIn 0.5s;
+}
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        

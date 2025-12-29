@@ -1,0 +1,5 @@
+
+.ws-demo { display: flex; align-items: center; gap: 20px; width: 80%; justify-content: space-between; margin-bottom: 20px;}
+.connection { flex: 1; height: 5px; background: var(--success, green); position: relative; display: flex; align-items: center; justify-content: center;}
+.msg { position: absolute; font-size: 1.5rem; opacity: 0; transition: transform 1s linear; }
+        

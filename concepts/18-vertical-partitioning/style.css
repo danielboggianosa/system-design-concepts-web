@@ -1,0 +1,11 @@
+
+.table {
+    border: 1px solid var(--glass-border);
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+}
+.header { color: var(--secondary); font-weight: bold; margin-bottom: 5px; }
+.split-tables { display: flex; gap: 10px; }
+        

@@ -1,0 +1,7 @@
+
+.mq-demo { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.box { padding: 10px; border: 1px solid white; }
+.queue { width: 150px; height: 50px; border-top: 2px solid grey; border-bottom: 2px solid grey; display: flex; overflow-x: auto; gap: 5px; align-items: center; padding: 0 5px;}
+.mq-msg { font-size: 1.5rem; animation: popIn 0.3s; }
+@keyframes popIn { from{transform:scale(0)} to{transform:scale(1)} }
+        

@@ -1,0 +1,5 @@
+
+.blob-demo { display: flex; align-items: center; gap: 50px; }
+.file { font-size: 3rem; transition: all 1s; }
+.bucket { font-size: 2rem; border: 2px dashed var(--text-muted); padding: 20px; border-radius: 10px; }
+        

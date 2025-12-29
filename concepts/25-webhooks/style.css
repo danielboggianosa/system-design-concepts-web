@@ -1,0 +1,6 @@
+
+.hook-demo { display: flex; align-items: center; gap: 30px; margin: 20px;}
+.service { padding: 20px; border: 2px solid var(--glass-border); border-radius: 8px; transition: border-color 0.3s; }
+.arrow-container { width: 100px; overflow: hidden; }
+#hook-arrow { display: block; transition: transform 0.5s; }
+        

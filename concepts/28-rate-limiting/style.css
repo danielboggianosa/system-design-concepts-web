@@ -1,0 +1,4 @@
+
+.reqs { display: flex; flex-direction: column; gap: 5px; height: 150px; overflow: hidden; margin-top: 10px; }
+.req { width: 100px; height: 20px; border-radius: 4px; color: white; font-size: 0.7rem; display: flex; align-items: center; justify-content: center; }
+        

@@ -5,48 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idempotency | System Design</title>
     <link rel="stylesheet" href="../../styles/main.css">
-    <style>
-        .visualization-container {
-            background: #0f172a;
-            border-radius: 20px;
-            border: 1px solid var(--glass-border);
-            height: 400px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            flex-direction: column;
-            text-align: center;
-            padding: 2rem;
-        }
-        .concept-emoji {
-            font-size: 8rem;
-            margin-bottom: 1rem;
-            filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
-            animation: float 6s ease-in-out infinite;
-        }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        .concept-tagline {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        ul {
-            margin-top: 1rem;
-            text-align: left;
-            padding-left: 1.5rem;
-        }
-        li {
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -63,10 +22,18 @@
                 </div>
             </div>
             <div class="visualization-container">
-                <div class="concept-emoji">🔄</div>
-                <div class="concept-tagline">Visuals Coming Soon</div>
+                
+            <div class="idem-demo">
+                <button class="btn giant-btn" onclick="charge()">PAY $10</button>
+                <div class="ledger">
+                    <div>Charges: <span id="charge-count">0</span></div>
+                    <div>Balance Deducted: <span id="balance">0</span></div>
+                </div>
+            </div>
+        
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
