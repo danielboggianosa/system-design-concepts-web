@@ -209,3 +209,49 @@ h1 {
         transform: translateY(0);
     }
 }
+/* Navigation Controls */
+.concept-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.nav-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-main);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+    border-color: var(--primary);
+}
+
+.nav-btn.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.nav-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-prev svg {
+    margin-right: 0.5rem;
+}
+
+.nav-next svg {
+    margin-left: 0.5rem;
+}
