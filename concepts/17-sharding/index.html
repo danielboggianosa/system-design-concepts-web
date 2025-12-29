@@ -7,11 +7,44 @@
     <link rel="stylesheet" href="../../styles/main.css">
     <style>
         .visualization-container {
+            background: #0f172a;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            height: 400px;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+            padding: 2rem;
+        }
+        .concept-emoji {
+            font-size: 8rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .concept-tagline {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        ul {
+            margin-top: 1rem;
+            text-align: left;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
             color: var(--text-muted);
-            font-size: 1.2rem;
         }
     </style>
 </head>
@@ -26,11 +59,12 @@
                 <div class="card-number">#17</div>
                 <h1>Sharding</h1>
                 <div class="concept-desc">
-                    <p>Details for Sharding are coming soon.</p>
+                    <p><strong>Sharding</strong> (Horizontal Partitioning) is splitting a large dataset across multiple databases (shards) based on a key (e.g., UserID).<br><br>Each shard holds a unique subset of data, allowing the system to handle massive amounts of data and writes.</p>
                 </div>
             </div>
             <div class="visualization-container">
-                <div>Visualization Placeholder</div>
+                <div class="concept-emoji">🍕</div>
+                <div class="concept-tagline">Visuals Coming Soon</div>
             </div>
         </div>
     </div>

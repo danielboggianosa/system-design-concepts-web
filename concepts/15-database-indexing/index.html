@@ -8,11 +8,46 @@
         <link rel="stylesheet" href="../../styles/main.css">
         <style>
             .visualization-container {
+                background: #0f172a;
+                border-radius: 20px;
+                border: 1px solid var(--glass-border);
+                height: 400px;
+                width: 100%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                color: var(--text-muted);
-                font-size: 1.2rem;
+                position: relative;
+                overflow: hidden;
+                flex-direction: column;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .concept-emoji {
+                font-size: 8rem;
+                margin-bottom: 1rem;
+                filter: drop-shadow(0 0 20px rgba(99, 102, 241, 0.3));
+                animation: float 6s ease-in-out infinite;
+            }
+
+            @keyframes float {
+                0% {
+                    transform: translateY(0px);
+                }
+
+                50% {
+                    transform: translateY(-20px);
+                }
+
+                100% {
+                    transform: translateY(0px);
+                }
+            }
+
+            .concept-tagline {
+                font-size: 1.5rem;
+                color: var(--primary);
+                font-weight: 600;
             }
         </style>
     </head>
@@ -32,11 +67,15 @@
                     <div class="card-number">#15</div>
                     <h1>Database Indexing</h1>
                     <div class="concept-desc">
-                        <p>Details for Database Indexing are coming soon.</p>
+                        <p><strong>Database Indexing</strong> is a data structure technique used to quickly locate and
+                            access the data in a database.<br><br>It's like the index at the back of a book: instead of
+                            reading every page (Full Table Scan) to find a topic, you look it up in the index to find
+                            the exact page number (Index Seek).</p>
                     </div>
                 </div>
                 <div class="visualization-container">
-                    <div>Visualization Placeholder</div>
+                    <div class="concept-emoji">🔖</div>
+                    <div class="concept-tagline">Visuals Coming Soon</div>
                 </div>
             </div>
         </div>
