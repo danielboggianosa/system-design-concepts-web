@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="card-number">#${concept.id.toString().padStart(2, '0')}</div>
-                <div class="card-title">${concept.title}</div>
+                <div class="card-title" data-i18n="c${concept.id.toString().padStart(2, '0')}_title">${concept.title}</div>
             `;
             grid.appendChild(card);
         });

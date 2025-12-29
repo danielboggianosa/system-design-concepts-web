@@ -255,3 +255,39 @@ h1 {
 .nav-next svg {
     margin-left: 0.5rem;
 }
+
+/* Language Selector */
+.lang-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(30, 30, 45, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--glass-border);
+}
+
+.lang-selector button {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.lang-selector button:hover {
+    color: var(--text-main);
+}
+
+.lang-selector button.active {
+    background: var(--primary);
+    color: white;
+}
