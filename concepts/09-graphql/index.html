@@ -25,12 +25,12 @@
                     <div class="card-number">#09</div>
                     <h1 data-i18n="c09_title">GraphQL</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c09_desc_1">
                             <strong>GraphQL</strong> is a query language for APIs. Unlike REST, where you often get too
                             much or too little data (Over/Under fetching), GraphQL allows the client to ask for
                             <strong>exactly what they need</strong>.
                         </p>
-                        <p>
+                        <p data-i18n="c09_desc_2">
                             "Give me just the name and age." -> Server returns just the name and age.
                         </p>
                     </div>
@@ -38,7 +38,7 @@
 
                 <div class="visualization-container" id="visualization">
                     <div class="query-editor">
-                        <div class="editor-title">Query</div>
+                        <div class="editor-title" data-i18n="c09_viz_query">Query</div>
                         <div class="code-block">
                             <span class="keyword">query</span> {<br>
                             &nbsp;&nbsp;user(id: "1") {<br>
@@ -55,7 +55,7 @@
                     <div class="arrow-indicator">➔</div>
 
                     <div class="response-viewer">
-                        <div class="editor-title">Response (JSON)</div>
+                        <div class="editor-title" data-i18n="c09_viz_resp">Response (JSON)</div>
                         <pre id="json-output">
 {
   "data": {
@@ -68,12 +68,17 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../08-rest-api/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         REST API
                     </div>
                 </a>
@@ -82,14 +87,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Databases
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

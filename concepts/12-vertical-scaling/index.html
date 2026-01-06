@@ -25,12 +25,13 @@
                     <div class="card-number">#12</div>
                     <h1 data-i18n="c12_title">Vertical Scaling</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c12_desc_1">
                             When a system gets more traffic, it needs to scale.
                         </p>
                         <div style="margin: 1rem 0;">
-                            <h4 style="color: var(--secondary)">Vertical Scaling (Scale Up)</h4>
-                            <p style="font-size: 0.9rem; margin-bottom: 0.5rem">Adding more power (CPU, RAM) to an
+                            <h4 style="color: var(--secondary)" data-i18n="c12_desc_2">Vertical Scaling (Scale Up)</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 0.5rem" data-i18n="c12_desc_3">Adding more power
+                                (CPU, RAM) to an
                                 existing machine. <br><em>"Buy a bigger machine."</em></p>
                         </div>
                     </div>
@@ -38,27 +39,33 @@
 
                 <div class="visualization-container" id="visualization">
                     <div class="scaling-area">
-                        <div class="label">Server Pool</div>
+                        <div class="label" data-i18n="c12_viz_pool">Server Pool</div>
                         <div id="server-container" class="server-container">
                             <div class="server-unit" id="main-server">
                                 <span class="icon">🤖</span>
-                                <span class="power-level">1x Power</span>
+                                <span class="power-level" data-i18n="c12_viz_power">1x Power</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="controls">
-                        <button class="btn" onclick="scaleVertical()">Vertical Scale (+Power)</button>
-                        <button class="btn danger" onclick="resetScaling()">Reset</button>
+                        <button class="btn" onclick="scaleVertical()" data-i18n="c12_viz_btn_scale">Vertical Scale
+                            (+Power)</button>
+                        <button class="btn danger" onclick="resetScaling()" data-i18n="c12_viz_btn_reset">Reset</button>
                     </div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../11-sql-vs-nosql/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         SQL vs NoSQL
                     </div>
                 </a>
@@ -67,14 +74,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Horizontal Scaling
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

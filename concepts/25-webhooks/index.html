@@ -1,46 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webhooks | System Design</title>
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <a href="../../index.html" class="nav-back">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-            <span data-i18n="nav_back">Back to Concepts</span>
-        </a>
-        <div class="concept-layout">
-            <div class="concept-info">
-                <div class="card-number">#25</div>
-                <h1 data-i18n="c25_title">Webhooks</h1>
-                <div class="concept-desc">
-                    <p><strong>Webhooks</strong> are user-defined HTTP callbacks.<br><br>Instead of your app polling an API ("Is it done yet?"), the service sends a POST request to your app when an event occurs ("It's done!").</p>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webhooks | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="nav_back">Back to Concepts</span>
+            </a>
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#25</div>
+                    <h1 data-i18n="c25_title">Webhooks</h1>
+                    <div class="concept-desc">
+                        <p data-i18n="c25_desc"><strong>Webhooks</strong> are user-defined HTTP
+                            callbacks.<br><br>Instead of your app polling an API ("Is it done yet?"), the service sends
+                            a POST request to your app when an event occurs ("It's done!").</p>
+                    </div>
+                </div>
+                <div class="visualization-container">
+
+                    <div class="hook-demo">
+                        <div class="service" id="provider" data-i18n="c25_viz_provider">Provider (GitHub)</div>
+                        <div class="arrow-container">
+                            <span id="hook-arrow">➡️</span>
+                        </div>
+                        <div class="service" id="consumer" data-i18n="c25_viz_consumer">Your App</div>
+                    </div>
+                    <button class="btn" onclick="triggerEvent()" data-i18n="c25_btn_trigger">Trigger Event
+                        (Push)</button>
+                    <div id="log" style="font-family: monospace; margin-top: 10px; color: var(--accent)"></div>
+
                 </div>
             </div>
-            <div class="visualization-container">
-                
-            <div class="hook-demo">
-                <div class="service" id="provider">Provider (GitHub)</div>
-                <div class="arrow-container">
-                    <span id="hook-arrow">➡️</span>
-                </div>
-                <div class="service" id="consumer">Your App</div>
-            </div>
-            <button class="btn" onclick="triggerEvent()">Trigger Event (Push)</button>
-            <div id="log" style="font-family: monospace; margin-top: 10px; color: var(--accent)"></div>
-        
-            </div>
-        </div>
-    
+
             <div class="concept-navigation">
                 <a href="../24-websockets/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         WebSockets
                     </div>
                 </a>
@@ -49,12 +63,17 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Microservices
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
-    <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="../../scripts/lang_data.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
+    </body>
+
 </html>

@@ -25,12 +25,12 @@
                     <div class="card-number">#23</div>
                     <h1 data-i18n="c23_title">CDN</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c23_desc_1">
                             <strong>CDN (Content Delivery Network)</strong> is a geographically distributed network of
                             proxy servers. Its goal is to provide high availability and performance by distributing the
                             service spatially relative to end-users.
                         </p>
-                        <p>
+                        <p data-i18n="c23_desc_2">
                             Instead of everyone downloading a video from one server in New York, users in London
                             download it from a server in London.
                         </p>
@@ -39,36 +39,47 @@
 
                 <div class="visualization-container" id="visualization">
                     <div class="world-map">
-                        <div class="server origin" id="origin-server" title="Origin (USA)">🇺🇸 Origin</div>
-                        <div class="server edge eu" id="edge-eu" title="Edge (Europe)">🇪🇺 Edge</div>
-                        <div class="server edge asia" id="edge-asia" title="Edge (Asia)">🇯🇵 Edge</div>
+                        <div class="server origin" id="origin-server" title="Origin (USA)" data-i18n="c23_viz_origin">
+                            🇺🇸 Origin</div>
+                        <div class="server edge eu" id="edge-eu" title="Edge (Europe)" data-i18n="c23_viz_edge_eu">🇪🇺
+                            Edge</div>
+                        <div class="server edge asia" id="edge-asia" title="Edge (Asia)" data-i18n="c23_viz_edge_asia">
+                            🇯🇵 Edge</div>
 
-                        <div class="user user-us">User (USA)</div>
-                        <div class="user user-eu">User (EU)</div>
-                        <div class="user user-asia">User (Asia)</div>
+                        <div class="user user-us" data-i18n="c23_viz_user_us">User (USA)</div>
+                        <div class="user user-eu" data-i18n="c23_viz_user_eu">User (EU)</div>
+                        <div class="user user-asia" data-i18n="c23_viz_user_asia">User (Asia)</div>
 
                         <!-- Travel lines will be drawn via JS usually or absolute positioned elements -->
                         <div class="packet" id="packet">📦</div>
                     </div>
 
                     <div class="controls">
-                        <label style="color: var(--text-muted); margin-right: 1rem;">Mode:</label>
+                        <label style="color: var(--text-muted); margin-right: 1rem;"
+                            data-i18n="c23_viz_mode">Mode:</label>
                         <div class="mode-switch">
-                            <button class="mode-btn active" onclick="setMode('no-cdn')">Without CDN</button>
-                            <button class="mode-btn" onclick="setMode('cdn')">With CDN</button>
+                            <button class="mode-btn active" onclick="setMode('no-cdn')"
+                                data-i18n="c23_btn_no_cdn">Without CDN</button>
+                            <button class="mode-btn" onclick="setMode('cdn')" data-i18n="c23_btn_cdn">With CDN</button>
                         </div>
-                        <button class="btn" id="start-btn" onclick="startStream()">Start Download</button>
+                        <button class="btn" id="start-btn" onclick="startStream()" data-i18n="c23_btn_start">Start
+                            Download</button>
                     </div>
 
                     <div id="stats" style="margin-top: 1rem; font-family: monospace; color: var(--text-muted);"></div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../22-blob-storage/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         Blob Storage
                     </div>
                 </a>
@@ -77,14 +88,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         WebSockets
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

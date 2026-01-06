@@ -25,22 +25,23 @@
                     <div class="card-number">#08</div>
                     <h1 data-i18n="c08_title">REST API</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c08_desc">
                             <strong>REST (Representational State Transfer)</strong> is a popular architectural style for
                             APIs. It uses standard HTTP methods to perform actions on resources (data objects).
                         </p>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
-                            <li><span class="verb get">GET</span> Retrieve a resource (Read).</li>
-                            <li><span class="verb post">POST</span> Create a new resource.</li>
-                            <li><span class="verb put">PUT</span> Update an existing resource (Replace).</li>
-                            <li><span class="verb delete">DELETE</span> Remove a resource.</li>
+                            <li data-i18n="c08_get"><span class="verb get">GET</span> Retrieve a resource (Read).</li>
+                            <li data-i18n="c08_post"><span class="verb post">POST</span> Create a new resource.</li>
+                            <li data-i18n="c08_put"><span class="verb put">PUT</span> Update an existing resource
+                                (Replace).</li>
+                            <li data-i18n="c08_delete"><span class="verb delete">DELETE</span> Remove a resource.</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="visualization-container" id="visualization">
                     <div class="database-container">
-                        <div class="db-label">Database Resources</div>
+                        <div class="db-label" data-i18n="c08_viz_db">Database Resources</div>
                         <div id="resource-slot">
                             <!-- Resource card will appear/change here -->
                         </div>
@@ -53,15 +54,20 @@
                         <button class="action-btn" onclick="executeMethod('DELETE')">DELETE</button>
                     </div>
 
-                    <div id="console-output">Ready...</div>
+                    <div id="console-output" data-i18n="c08_viz_ready">Ready...</div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../07-apis/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         APIs
                     </div>
                 </a>
@@ -70,14 +76,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         GraphQL
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

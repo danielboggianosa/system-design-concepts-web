@@ -25,20 +25,23 @@
                     <div class="card-number">#07</div>
                     <h1 data-i18n="c07_title">APIs</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c07_desc_1">
                             <strong>API (Application Programming Interface)</strong> is a set of rules that allows
                             different software applications to communicate with each other.
                         </p>
-                        <p>
+                        <p data-i18n="c07_desc_2">
                             The classic analogy is a <strong>Restaurant</strong>:
                         </p>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
-                            <li style="margin-bottom: 0.5rem;"><strong>You (Client):</strong> You want food
+                            <li style="margin-bottom: 0.5rem;" data-i18n="c07_list_client"><strong>You
+                                    (Client):</strong> You want food
                                 (data/service), but you can't go into the kitchen.</li>
-                            <li style="margin-bottom: 0.5rem;"><strong style="color: var(--primary)">Waiter
+                            <li style="margin-bottom: 0.5rem;" data-i18n="c07_list_waiter"><strong
+                                    style="color: var(--primary)">Waiter
                                     (API):</strong> Takes your order, sends it to the kitchen, and brings you the food.
                             </li>
-                            <li><strong>Kitchen (System):</strong> Prepares the food described in the order.</li>
+                            <li data-i18n="c07_list_kitchen"><strong>Kitchen (System):</strong> Prepares the food
+                                described in the order.</li>
                         </ul>
                     </div>
                 </div>
@@ -47,34 +50,39 @@
                     <div class="scene">
                         <div class="zone customer-zone">
                             <div class="emoji">👤</div>
-                            <div class="label">Customer</div>
+                            <div class="label" data-i18n="c07_viz_cust">Customer</div>
                         </div>
 
                         <div class="zone waiter-zone">
                             <div class="emoji" id="waiter">🤵</div>
-                            <div class="label">API (Waiter)</div>
-                            <div class="order-bubble" id="order-bubble">📝 Order</div>
+                            <div class="label" data-i18n="c07_viz_waiter">API (Waiter)</div>
+                            <div class="order-bubble" id="order-bubble" data-i18n="c07_viz_order">📝 Order</div>
                         </div>
 
                         <div class="zone kitchen-zone">
                             <div class="emoji">👨‍🍳</div>
-                            <div class="label">System (Kitchen)</div>
+                            <div class="label" data-i18n="c07_viz_kitchen">System (Kitchen)</div>
                         </div>
                     </div>
 
-                    <div class="status-msg" id="api-status">Waiting for order...</div>
+                    <div class="status-msg" id="api-status" data-i18n="c07_viz_status">Waiting for order...</div>
 
                     <div class="controls">
-                        <button id="order-btn" class="btn">Place Order</button>
+                        <button id="order-btn" class="btn" data-i18n="c07_viz_btn">Place Order</button>
                     </div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../06-http-https/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         HTTP/HTTPS
                     </div>
                 </a>
@@ -83,14 +91,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         REST API
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

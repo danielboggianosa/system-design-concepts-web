@@ -25,17 +25,19 @@
                     <div class="card-number">#04</div>
                     <h1 data-i18n="c04_title">Proxy / Reverse Proxy</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c04_desc">
                             An intermediary server that sits between client and server.
                         </p>
                         <div style="margin: 1rem 0;">
-                            <h3 style="color: var(--primary)">Forward Proxy</h3>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Sits before the client. Hides the
+                            <h3 style="color: var(--primary)" data-i18n="c04_fwd_title">Forward Proxy</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="c04_fwd_desc">Sits before
+                                the client. Hides the
                                 client's identity from the server. (e.g. VPN, School Filter)</p>
                         </div>
                         <div style="margin: 1rem 0;">
-                            <h3 style="color: var(--secondary)">Reverse Proxy</h3>
-                            <p style="font-size: 0.9rem; color: var(--text-muted);">Sits before the server. Hides the
+                            <h3 style="color: var(--secondary)" data-i18n="c04_rev_title">Reverse Proxy</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);" data-i18n="c04_rev_desc">Sits before
+                                the server. Hides the
                                 server's identity from the client. (e.g. Load Balancer, CDN, Security)</p>
                         </div>
                     </div>
@@ -43,44 +45,51 @@
 
                 <div class="visualization-container" id="visualization">
                     <div class="mode-switch">
-                        <button class="mode-btn active" onclick="setMode('forward')">Forward Proxy</button>
-                        <button class="mode-btn" onclick="setMode('reverse')">Reverse Proxy</button>
+                        <button class="mode-btn active" onclick="setMode('forward')" data-i18n="c04_btn_fwd">Forward
+                            Proxy</button>
+                        <button class="mode-btn" onclick="setMode('reverse')" data-i18n="c04_btn_rev">Reverse
+                            Proxy</button>
                     </div>
 
                     <div class="network-flow" id="network-flow">
                         <div class="entity client">
                             <span class="icon">👤</span>
-                            <span class="label">Client</span>
+                            <span class="label" data-i18n="c04_viz_client">Client</span>
                         </div>
 
                         <div class="entity proxy" id="proxy-entity">
                             <span class="icon">🛡️</span>
-                            <span class="label">Proxy</span>
+                            <span class="label" data-i18n="c04_viz_proxy">Proxy</span>
                         </div>
 
                         <div class="entity server">
                             <span class="icon">☁️</span>
-                            <span class="label">Internet/Server</span>
+                            <span class="label" data-i18n="c04_viz_server">Internet/Server</span>
                         </div>
 
                         <div class="packet" id="proxy-packet"></div>
                     </div>
 
-                    <div class="explanation-text" id="explanation">
+                    <div class="explanation-text" id="explanation" data-i18n="c04_viz_expl">
                         The Server sees the Proxy IP, not the Client IP.
                     </div>
 
                     <div class="controls">
-                        <button id="send-proxy-btn" class="btn">Simulate Request</button>
+                        <button id="send-proxy-btn" class="btn" data-i18n="c04_viz_sim">Simulate Request</button>
                     </div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../03-dns/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         DNS
                     </div>
                 </a>
@@ -89,14 +98,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Latency
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

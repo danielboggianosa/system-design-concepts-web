@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAP Theorem | System Design</title>
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <a href="../../index.html" class="nav-back">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-            <span data-i18n="nav_back">Back to Concepts</span>
-        </a>
-        <div class="concept-layout">
-            <div class="concept-info">
-                <div class="card-number">#21</div>
-                <h1 data-i18n="c21_title">CAP Theorem</h1>
-                <div class="concept-desc">
-                    <p>The <strong>CAP Theorem</strong> states that a distributed system can only provide two of the following three guarantees:<br><br>1. <strong>Consistency</strong> (Every read receives the most recent write)<br>2. <strong>Availability</strong> (Every request receives a response)<br>3. <strong>Partition Tolerance</strong> (System continues to work despite network failures)</p>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAP Theorem | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="nav_back">Back to Concepts</span>
+            </a>
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#21</div>
+                    <h1 data-i18n="c21_title">CAP Theorem</h1>
+                    <div class="concept-desc">
+                        <p data-i18n="c21_desc">The <strong>CAP Theorem</strong> states that a distributed system can
+                            only provide two of the following three guarantees:<br><br>1. <strong>Consistency</strong>
+                            (Every read receives the most recent write)<br>2. <strong>Availability</strong> (Every
+                            request receives a response)<br>3. <strong>Partition Tolerance</strong> (System continues to
+                            work despite network failures)</p>
+                    </div>
+                </div>
+                <div class="visualization-container">
+
+                    <div class="cap-selector">
+                        <div class="cap-triangle">
+                            <div class="point top" data-i18n="c21_viz_c">Consistency</div>
+                            <div class="point left" data-i18n="c21_viz_a">Availability</div>
+                            <div class="point right" data-i18n="c21_viz_p">Partition Tolerance</div>
+                        </div>
+                        <div class="message" data-i18n="c21_viz_msg">Pick 2 (Usually P + C or A)</div>
+                        <div class="options">
+                            <button class="btn" onclick="pick('CP')" data-i18n="c21_btn_cp">CP</button>
+                            <button class="btn" onclick="pick('AP')" data-i18n="c21_btn_ap">AP</button>
+                            <button class="btn" onclick="pick('CA')" data-i18n="c21_btn_ca">CA (Rare)</button>
+                        </div>
+                        <div id="cap-desc" style="margin-top: 10px; color: var(--accent)"></div>
+                    </div>
+
                 </div>
             </div>
-            <div class="visualization-container">
-                
-            <div class="cap-selector">
-                <div class="cap-triangle">
-                   <div class="point top">Consistency</div>
-                   <div class="point left">Availability</div>
-                   <div class="point right">Partition Tolerance</div>
-                </div>
-                <div class="message">Pick 2 (Usually P + C or A)</div>
-                <div class="options">
-                    <button class="btn" onclick="pick('CP')">CP</button>
-                    <button class="btn" onclick="pick('AP')">AP</button>
-                    <button class="btn" onclick="pick('CA')">CA (Rare)</button>
-                </div>
-                <div id="cap-desc" style="margin-top: 10px; color: var(--accent)"></div>
-            </div>
-        
-            </div>
-        </div>
-    
+
             <div class="concept-navigation">
                 <a href="../20-denormalization/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         Denormalization
                     </div>
                 </a>
@@ -54,12 +69,17 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Blob Storage
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
-    <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="../../scripts/lang_data.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
+    </body>
+
 </html>

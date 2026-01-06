@@ -25,17 +25,19 @@
                     <div class="card-number">#19</div>
                     <h1 data-i18n="c19_title">Caching</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c19_desc_1">
                             <strong>Caching</strong> is using a high-speed data storage layer (RAM) to store a subset of
                             data so that future requests for that data are served faster.
                         </p>
-                        <p>
+                        <p data-i18n="c19_desc_2">
                             It's like keeping your most used tools on your belt instead of walking to the garage
                             (Database) every time you need them.
                         </p>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
-                            <li><span class="status-badge hit">Cache Hit</span> Data found in cache (Fast)</li>
-                            <li><span class="status-badge miss">Cache Miss</span> Data not in cache, fetch from DB
+                            <li data-i18n="c19_list_hit"><span class="status-badge hit">Cache Hit</span> Data found in
+                                cache (Fast)</li>
+                            <li data-i18n="c19_list_miss"><span class="status-badge miss">Cache Miss</span> Data not in
+                                cache, fetch from DB
                                 (Slow)</li>
                         </ul>
                     </div>
@@ -44,19 +46,19 @@
                 <div class="visualization-container" id="visualization">
                     <div class="user-node">
                         <div class="emoji">👨‍💻</div>
-                        <div class="label">User</div>
+                        <div class="label" data-i18n="c19_viz_user">User</div>
                     </div>
 
                     <div class="system-flow">
                         <div class="cache-layer">
-                            <div class="layer-title">Cache (RAM)</div>
+                            <div class="layer-title" data-i18n="c19_viz_cache">Cache (RAM)</div>
                             <div class="cache-storage" id="cache-storage">
                                 <!-- Cache items appear here -->
                             </div>
                         </div>
 
                         <div class="db-layer">
-                            <div class="layer-title">Database (Disk)</div>
+                            <div class="layer-title" data-i18n="c19_viz_db">Database (Disk)</div>
                             <div class="db-storage">
                                 <div class="data-block">A</div>
                                 <div class="data-block">B</div>
@@ -66,19 +68,24 @@
                     </div>
 
                     <div class="controls">
-                        <button class="btn" onclick="requestData('A')">Request 'A'</button>
-                        <button class="btn" onclick="requestData('B')">Request 'B'</button>
+                        <button class="btn" onclick="requestData('A')" data-i18n="c19_btn_a">Request 'A'</button>
+                        <button class="btn" onclick="requestData('B')" data-i18n="c19_btn_b">Request 'B'</button>
                         <div class="status-display" id="status-display">Ready</div>
                         <div class="time-display" id="time-display">Time: 0ms</div>
                     </div>
                 </div>
             </div>
-        
+
             <div class="concept-navigation">
                 <a href="../18-vertical-partitioning/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         Vertical Partitioning
                     </div>
                 </a>
@@ -87,14 +94,18 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Denormalization
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
 
         <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </html>

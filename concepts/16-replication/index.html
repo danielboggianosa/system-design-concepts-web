@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replication | System Design</title>
-    <link rel="stylesheet" href="../../styles/main.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <a href="../../index.html" class="nav-back">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
-            <span data-i18n="nav_back">Back to Concepts</span>
-        </a>
-        <div class="concept-layout">
-            <div class="concept-info">
-                <div class="card-number">#16</div>
-                <h1 data-i18n="c16_title">Replication</h1>
-                <div class="concept-desc">
-                    <p><strong>Replication</strong> involves strictly copying data from one database node (primary) to one or more nodes (replicas).<br><br>This increases <strong>Availability</strong> (if one fails, others work) and <strong>Read Performance</strong> (reads can be spread across replicas).</p>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Replication | System Design</title>
+        <link rel="stylesheet" href="../../styles/main.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <a href="../../index.html" class="nav-back">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5" />
+                    <path d="M12 19l-7-7 7-7" />
+                </svg>
+                <span data-i18n="nav_back">Back to Concepts</span>
+            </a>
+            <div class="concept-layout">
+                <div class="concept-info">
+                    <div class="card-number">#16</div>
+                    <h1 data-i18n="c16_title">Replication</h1>
+                    <div class="concept-desc">
+                        <p data-i18n="c16_desc"><strong>Replication</strong> involves strictly copying data from one
+                            database node (primary) to one or more nodes (replicas).<br><br>This increases
+                            <strong>Availability</strong> (if one fails, others work) and <strong>Read
+                                Performance</strong> (reads can be spread across replicas).</p>
+                    </div>
+                </div>
+                <div class="visualization-container">
+
+                    <div class="replication-demo">
+                        <div class="db-node primary" id="primary" data-i18n="c16_primary">Primary</div>
+                        <div class="arrows">
+                            <span class="arrow">⬇️</span>
+                            <span class="arrow">⬇️</span>
+                        </div>
+                        <div class="replicas">
+                            <div class="db-node replica" id="r1"><span data-i18n="c16_replica">Replica</span> 1</div>
+                            <div class="db-node replica" id="r2"><span data-i18n="c16_replica">Replica</span> 2</div>
+                        </div>
+                        <button class="btn" onclick="writeData()" data-i18n="c16_btn_write">Write Data</button>
+                    </div>
+
                 </div>
             </div>
-            <div class="visualization-container">
-                
-            <div class="replication-demo">
-                <div class="db-node primary" id="primary">Primary</div>
-                <div class="arrows">
-                    <span class="arrow">⬇️</span>
-                    <span class="arrow">⬇️</span>
-                </div>
-                <div class="replicas">
-                    <div class="db-node replica" id="r1">Replica 1</div>
-                    <div class="db-node replica" id="r2">Replica 2</div>
-                </div>
-                <button class="btn" onclick="writeData()">Write Data</button>
-            </div>
-        
-            </div>
-        </div>
-    
+
             <div class="concept-navigation">
                 <a href="../15-database-indexing/index.html" class="nav-btn nav-prev">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M12 19l-7-7 7-7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5" />
+                        <path d="M12 19l-7-7 7-7" />
+                    </svg>
                     <div class="nav-label">
-                        <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_prev">Previous</span>
+                        <span style="display:block; font-size: 0.8rem; opacity: 0.7"
+                            data-i18n="nav_prev">Previous</span>
                         Database Indexing
                     </div>
                 </a>
@@ -52,12 +66,17 @@
                         <span style="display:block; font-size: 0.8rem; opacity: 0.7" data-i18n="nav_next">Next</span>
                         Sharding
                     </div>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14" />
+                        <path d="M12 5l7 7-7 7" />
+                    </svg>
                 </a>
             </div>
         </div>
-    <script src="../../scripts/lang_data.js"></script>
-    <script src="../../scripts/i18n_core.js"></script>
-    <script src="script.js"></script>
-</body>
+        <script src="../../scripts/lang_data.js"></script>
+        <script src="../../scripts/i18n_core.js"></script>
+        <script src="script.js"></script>
+    </body>
+
 </html>

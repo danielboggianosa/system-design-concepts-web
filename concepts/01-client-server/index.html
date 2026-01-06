@@ -25,17 +25,17 @@
                     <div class="card-number">#01</div>
                     <h1 data-i18n="c01_title">Client-Server Architecture</h1>
                     <div class="concept-desc">
-                        <p>
+                        <p data-i18n="c01_desc">
                             The fundamental architectural pattern of the web. It separates concerns into two distinct
                             parties:
                         </p>
                         <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style-type: none;">
-                            <li style="margin-bottom: 0.5rem;"><strong style="color: var(--primary)">Client:</strong>
+                            <li style="margin-bottom: 0.5rem;" data-i18n="c01_client"><strong style="color: var(--primary)">Client:</strong>
                                 The requester (Browser, Mobile App). It initiates communication.</li>
-                            <li><strong style="color: var(--secondary)">Server:</strong> The provider. It processes
+                            <li data-i18n="c01_server"><strong style="color: var(--secondary)">Server:</strong> The provider. It processes
                                 requests and returns resources (HTML, JSON, Files).</li>
                         </ul>
-                        <p>
+                        <p data-i18n="c01_note">
                             Communication typically happens over HTTP/HTTPS. Ideally, the client doesn't need to know
                             how the server works, just how to ask for what it wants (API).
                         </p>
@@ -46,7 +46,7 @@
                     <!-- Animation Elements -->
                     <div class="device client">
                         <div class="icon">💻</div>
-                        <div class="label">Client</div>
+                        <div class="label" data-i18n="c01_viz_client">Client</div>
                     </div>
 
                     <div class="pathway">
@@ -56,12 +56,12 @@
 
                     <div class="device server">
                         <div class="icon">🖥️</div>
-                        <div class="label">Server</div>
+                        <div class="label" data-i18n="c01_viz_server">Server</div>
                         <div class="status-light" id="server-status"></div>
                     </div>
 
                     <div class="controls">
-                        <button id="restart-btn" class="btn">Send Request</button>
+                        <button id="restart-btn" class="btn" data-i18n="c01_viz_send">Send Request</button>
                     </div>
                 </div>
             </div>
