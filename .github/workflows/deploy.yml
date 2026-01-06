@@ -12,6 +12,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Prepare file for deployment
+        run: |
+          rm -rf .git
+          rm -rf .github
+          rm -rf .gitignore
+          rm -rf node_modules
+
       - name: Deploy with SCP
         uses: appleboy/scp-action@master
         with:
@@ -21,4 +28,3 @@ jobs:
           source: "./"
           target: ${{ secrets.DEPLOY_PATH }}
           rm: true # Delete existing files in target before copy (optional but cleaner)
-          exclude: ".git, .github, .gitignore, node_modules"
